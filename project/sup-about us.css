@@ -1,0 +1,76 @@
+html {
+    scroll-behavior: smooth; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: 'kanit', sans-serif;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+}  
+
+nav {
+    max-width: 1800px;
+    width: 90vw;
+    margin: 0 auto;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    position: fixed; 
+    z-index: 20;
+    backdrop-filter: blur(10px);
+  }
+
+ul {
+    list-style: none; 
+    display: flex;
+    gap: 50px; 
+    margin-left: 10px;
+}
+
+li a { 
+  text-decoration: none; 
+  font-size: 20px;
+  color: #000000;
+}
+
+.about {
+    padding: 3px 25px;
+    background-color: #03500a;
+    border: 2px;
+    border-radius: 100px;
+    color: #ffffff;
+}
+  
+.main:hover {
+    cursor: pointer;
+    color: #ff0000;
+    transition: transform 0.3s, color 0.3s;
+}
+  
+.work:hover {
+    cursor: pointer;
+    color: #00ff2a;
+    transition: transform 0.3s, color 0.3s;
+}
+.rules:hover {
+  
+    cursor: pointer;
+    color: #eeff00;
+    transition: transform 0.3s, color 0.3s;
+}
+  
+.about:hover {
+    cursor: pointer;
+    color: #00e1ff;
+    transition: transform 0.3s, color 0.3s;
+}
+  
+.logo img {
+    margin: 0 auto; 
+    width: 120px;
+    height: 50px;
+}
