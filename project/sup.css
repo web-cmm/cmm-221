@@ -43,6 +43,8 @@ li a {
   text-decoration: none; 
   font-size: 20px;
   color: #000000;
+  background-color: var(--li-bg-color);
+  color: var(--li-text-color);
 }
 
 header {
@@ -55,6 +57,7 @@ header {
   border: 2px;
   border-radius: 100px;
   color: #ffffff;
+  background-color: var(--main-bg-color);
 }
 
 .main:hover {
@@ -96,7 +99,7 @@ header {
   z-index: 10;
 }
 
-.promote h3 {
+.promote h2 {
   margin-top: 100px;
   padding: 10px 25px;
   background-color: #2E3033;
@@ -104,6 +107,8 @@ header {
   border-radius: 100px;
   color: #ffffff;
   text-align: center;
+  color: var(--h2-text-color);
+  background-color: var(--h2-bg-color);
 }
 
 .photo{
@@ -399,4 +404,139 @@ footer a:hover {
       flex-direction: column; /* เรียงแนวตั้งในจอขนาดเล็ก */
       text-align: center; /* จัดข้อความให้อยู่กลาง */
   }
+}
+
+.myImg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* Default Light Mode */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #1a73e8;
+  --nav-bg-color: #ffffff;
+  --li-text-color: #000000;
+  --button-bg-color: #007BFF;
+  --button-text-color: #ffffff;
+  --h2-bg-color: #2e3033;
+  --h2-text-color: #ffffff;
+  --main-bg-color: #235144;
+
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --link-color: #bb86fc;
+  --nav-bg-color: #333333;
+  --li-text-color: #ffffff;
+  --button-bg-color: #6200ee;
+  --button-text-color: #ffffff;
+  --h2-bg-color: #ffffff;
+  --h2-text-color: #000000;
+  --main-bg-color: #950709;
+  
+}
+
+/* ใช้ตัวแปรเหล่านี้ในส่วนต่าง ๆ ของ CSS */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
+/* เพิ่มการเปลี่ยนสีเมื่อ hover */
+button:hover {
+  background-color: #0056b3;
 }
