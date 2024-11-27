@@ -1,0 +1,542 @@
+html {
+    scroll-behavior: smooth; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: 'kanit', sans-serif;
+}
+
+@media (max-width: 768px) { 
+    
+}
+
+@media (max-width: 480px) { 
+
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+}  
+
+nav {
+    max-width: 1800px;
+    width: 90vw;
+    margin: 0 auto;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    position: fixed; 
+    z-index: 20;
+    backdrop-filter: blur(10px);
+  }
+
+ul {
+    list-style: none; 
+    display: flex;
+    gap: 50px; 
+    margin-left: 10px;
+}
+
+li a { 
+  text-decoration: none; 
+  font-size: 20px;
+  color: #000000;
+  background-color: var(--li-bg-color);
+  color: var(--li-text-color);
+}
+
+header {
+  height: 100vh;
+}
+
+.main {
+  padding: 3px 25px;
+  background-color: #03500a;
+  border: 2px;
+  border-radius: 100px;
+  color: #ffffff;
+  background-color: var(--main-bg-color);
+}
+
+.main:hover {
+  cursor: pointer;
+  color: #ff0000;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.work:hover {
+  cursor: pointer;
+  color: #00ff2a;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.rules:hover {
+  cursor: pointer;
+  color: #eeff00;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.about:hover {
+  cursor: pointer;
+  color: #00e1ff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.logo img {
+  margin: 0 auto; 
+  width: 120px;
+  height: 50px;
+}
+
+.promote {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.promote h2 {
+  margin-top: 100px;
+  padding: 10px 25px;
+  background-color: #2E3033;
+  border: 2px;
+  border-radius: 100px;
+  color: #ffffff;
+  text-align: center;
+  color: var(--h2-text-color);
+  background-color: var(--h2-bg-color);
+}
+
+.photo{
+  max-width: 890px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.card1 {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card1 img {
+  margin: 0 auto; 
+  width: 222px;
+  height: 234px;
+  margin-top: 20px;
+  padding: 40px 20px;
+  background-color: #EFF2E0;
+  border: 2px;
+  border-radius: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card1 p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card2 img {
+  margin: 0 auto; 
+  width: 222px;
+  height: 234px;
+  margin-top: 20px;
+  padding: 40px 20px;
+  background-color: #235144;
+  border: 2px;
+  border-radius: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card2 p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.card3 {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card3 img {
+  margin: 0 auto; 
+  width: 222px;
+  height: 234px;
+  margin-top: 20px;
+  padding: 40px 20px;
+  background-color: #950709;
+  border: 2px;
+  border-radius: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card3 p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.highlight1 {
+  background-color: #ff0000;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.highlight2 {
+  background-color: #427B6C;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.column1{
+  display: block;
+  width: 60%;
+  float: left;
+}
+
+.column1 p {
+  margin-bottom: 20px; 
+  text-indent: 5ch;
+}
+
+.column2{
+  display: block;
+  width: 40%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.column2 img {
+  margin: 0 auto;
+  width: 335px;
+  height: 335px;
+}
+
+.column3{
+  display: block;
+  width: 40%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.column3 img {
+  margin: 0 auto;
+  width: 335px;
+  height: 335px;
+}
+
+.column4{
+  display: block;
+  width: 60%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  height: 335px;
+}
+
+.column4 p {
+  margin-bottom: 20px; 
+  text-indent: 5ch;
+}
+
+.slider {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 60px 100px;
+}
+
+.slider img {
+  width: 100%;
+  display: none;
+}
+
+.slider img.active {
+  display: block;
+}
+
+.slider .prev, .slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.slider .prev {
+  left: 10px;
+}
+
+.slider .next {
+  right: 10px;
+}
+
+footer {
+  background-color: #D9D9D9; /* สีพื้นหลัง */
+  color: #2D2D2D; /* สีข้อความ */
+  padding: 20px 10px; /* เว้นระยะห่างภายใน */
+  text-align: center;
+  margin-top: 355px;
+  max-width: 100%;
+}
+
+/* ลิงก์ใน Footer */
+footer a {
+  color: #4CAF50; /* สีลิงก์ */
+  text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+  margin: 0 10px; /* เว้นระยะระหว่างลิงก์ */
+}
+
+footer a:hover {
+  text-decoration: underline; /* เพิ่มเส้นใต้เมื่อชี้เมาส์ */
+}
+
+/* กำหนดรูปแบบการแสดงผลสำหรับ Footer แยกส่วน */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* กระจายเนื้อหา */
+  align-items: center;
+  max-width: 100%; /* จำกัดความกว้าง */
+  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+}
+
+.footer-container div {
+  flex: 1;
+  margin: 10px;
+  text-align: left; /* จัดข้อความชิดซ้าย */
+}
+
+.footer-container div h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-container div p, .footer-container div ul {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-container ul {
+  list-style: none; /* เอาสัญลักษณ์จุดออก */
+  padding: 0;
+}
+
+.footer-container ul li {
+  margin-bottom: 5px;
+}
+
+.social-icons h3 {
+  font-weight: bold;
+}
+
+
+/* สไตล์สำหรับ Social Media */
+.social-icons a {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 20px;
+  color: #2D2D2D;
+}
+
+.social-iconsimg {
+  justify-content: flex-end;
+  text-align: right;
+  display: flex;
+}
+
+.social-iconsimg img{
+  width: 25px;
+  height: 25px;
+}
+
+.social-icons a:hover {
+  color: #4CAF50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column; /* เรียงแนวตั้งในจอขนาดเล็ก */
+      text-align: center; /* จัดข้อความให้อยู่กลาง */
+  }
+}
+
+.myImg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* Default Light Mode */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #1a73e8;
+  --nav-bg-color: #ffffff;
+  --li-text-color: #000000;
+  --button-bg-color: #007BFF;
+  --button-text-color: #ffffff;
+  --h2-bg-color: #2e3033;
+  --h2-text-color: #ffffff;
+  --main-bg-color: #235144;
+
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --link-color: #bb86fc;
+  --nav-bg-color: #333333;
+  --li-text-color: #ffffff;
+  --button-bg-color: #6200ee;
+  --button-text-color: #ffffff;
+  --h2-bg-color: #ffffff;
+  --h2-text-color: #000000;
+  --main-bg-color: #950709;
+  
+}
+
+/* ใช้ตัวแปรเหล่านี้ในส่วนต่าง ๆ ของ CSS */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
+/* เพิ่มการเปลี่ยนสีเมื่อ hover */
+button:hover {
+  background-color: #0056b3;
+}
