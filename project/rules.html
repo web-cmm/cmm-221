@@ -17,7 +17,7 @@
             <nav> 
               <div class="logo">
                   <a href="#home"> 
-                      <img src="images/logo test.png" alt="logo">
+                      <img id="themeImage" src="images/logo test.png" alt="logo">
                   </a>
               </div>
               <ul>
@@ -25,6 +25,7 @@
                   <li><a href="work-Graphic.html" class="work">Work</a></li>
                   <li><a href="rules.html" class="rules">Rules</a></li>
                   <li><a href="About us.html" class="about">About us</a></li>
+                  <li><button id="theme-toggle">Switch to Dark Mode</button></li>
               </ul>
             </nav>
         </div><br> <br> <br> <br> <br>
@@ -57,9 +58,57 @@
                 </div>   
                 
                 <div class="footer-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
               </section>
             </div>
+
+            <script>
+                  // เลือกปุ่มที่เราต้องการใช้งาน
+const themeToggleButton = document.getElementById('theme-toggle');
+const themeImage = document.getElementById('themeImage');
+
+// ตรวจสอบธีมปัจจุบันใน localStorage หรือใช้ธีม default
+const currentTheme = localStorage.getItem('theme') || 'light';
+if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeImage.src = "image-dark.jpg";  // เปลี่ยนรูปภาพเป็น Dark Mode
+} else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    themeImage.src = "images/logo test.png";  // เปลี่ยนรูปภาพเป็น Light Mode
+}
+
+// เพิ่ม Event Listener ให้กับปุ่ม
+themeToggleButton.addEventListener('click', () => {
+    // ตรวจสอบว่าใช้งาน Dark Mode อยู่หรือไม่
+    let newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    
+    
+    // เปลี่ยนธีม
+    document.documentElement.setAttribute('data-theme', newTheme);
+
+    // เปลี่ยนแหล่งที่มาของรูปภาพ
+    if (newTheme === 'dark') {
+        themeImage.src = "images/naga.jpg"; // รูปสำหรับ Dark Mode
+    } else {
+        themeImage.src = "images/logo test.png"; // รูปสำหรับ Light Mode
+    }
+
+    
+    // บันทึกธีมใน Local Storage
+    localStorage.setItem('theme', newTheme);
+
+    // เปลี่ยนข้อความบนปุ่ม
+    if (newTheme === 'dark') {
+        themeToggleButton.textContent = "Switch to Light Mode";
+    } else {
+        themeToggleButton.textContent = "Switch to Dark Mode";
+    }
+});
+
+    </script>
+            
+            <!-- <script src="script.js"></script> -->
           </body>
           </html>
