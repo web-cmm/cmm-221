@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wdth,wght@62.5..100,365&display=swap" rel="stylesheet">
+        <link href="sup-rules.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+        <title>rules</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <nav> 
+              <div class="logo">
+                  <a href="#home"> 
+                      <img id="themeImage" src="images/logo test.png" alt="logo">
+                  </a>
+              </div>
+              <ul>
+                  <li><a href="main.html" class="main">Main</a></li>
+                  <li><a href="work-Graphic.html" class="work">Work</a></li>
+                  <li><a href="rules.html" class="rules">Rules</a></li>
+                  <li><a href="About us.html" class="about">About us</a></li>
+              </ul>
+            </nav>
+        </div><br> <br> <br> <br> <br>
+
+        <body>
+            <div class="container">
+              
+                <div class="topic">
+                  <a>วิธีการบลาๆๆ</a>
+                </div>
+                
+              <section class="content">
+                
+                <div class="text-and-image1">
+                    <div class="text1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  <div class="image1">
+                    <center><img src="images/Nikke cloud.jpg" alt="Illustration"></center>
+                  </div>
+                </div>
+                
+                <div class="text-and-image2">
+                  <div class="image2">
+                    <center><img src="images/Nikke cloud.jpg" alt="Illustration"></center>
+                  </div>  
+                    <div class="text2">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>   
+                
+                <div class="footer-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </section>
+            </div>
+
+            <input type="checkbox" id="theme-toggle">
+<label for="theme-toggle"></label>
+
+            <script>
+                  // เลือกปุ่มที่เราต้องการใช้งาน
+const themeToggleButton = document.getElementById('theme-toggle');
+const themeImage = document.getElementById('themeImage');
+
+// ตรวจสอบธีมปัจจุบันใน localStorage หรือใช้ธีม default
+const currentTheme = localStorage.getItem('theme') || 'light';
+if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeImage.src = "image-dark.jpg";  // เปลี่ยนรูปภาพเป็น Dark Mode
+} else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    themeImage.src = "images/logo test.png";  // เปลี่ยนรูปภาพเป็น Light Mode
+}
+
+// เพิ่ม Event Listener ให้กับปุ่ม
+themeToggleButton.addEventListener('click', () => {
+    // ตรวจสอบว่าใช้งาน Dark Mode อยู่หรือไม่
+    let newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    
+    
+    // เปลี่ยนธีม
+    document.documentElement.setAttribute('data-theme', newTheme);
+
+    // เปลี่ยนแหล่งที่มาของรูปภาพ
+    if (newTheme === 'dark') {
+        themeImage.src = "images/naga.jpg"; // รูปสำหรับ Dark Mode
+    } else {
+        themeImage.src = "images/logo test.png"; // รูปสำหรับ Light Mode
+    }
+
+    
+    // บันทึกธีมใน Local Storage
+    localStorage.setItem('theme', newTheme);
+
+    // เปลี่ยนข้อความบนปุ่ม
+    if (newTheme === 'dark') {
+        themeToggleButton.textContent = "Switch to Light Mode";
+    } else {
+        themeToggleButton.textContent = "Switch to Dark Mode";
+    }
+});
+
+    </script>
+            
+            <!-- <script src="script.js"></script> -->
+          </body>
+          </html>
