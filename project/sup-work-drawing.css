@@ -5,12 +5,15 @@ html {
 
 body {
     font-family: 'kanit', sans-serif;
+    margin: 8px; 
+    padding: 0; 
+    box-sizing: border-box;
 }
 
 .container {
     max-width: 1800px;
     margin: 0 auto;
-}  
+} 
 
 nav {
     max-width: 1800px;
@@ -80,7 +83,7 @@ li a {
     flex-wrap: wrap;
     justify-content: space-between; /* กระจายเนื้อหา */
     align-items: center;
-    width: 1000px;
+    width: 100%;
     height: 300px; /* จำกัดความกว้าง */
     margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
     bottom: 0px;
@@ -130,11 +133,69 @@ li a {
     text-decoration: none;
 }
 
+/* ส่วนที่ไอจือ cook
+
+- ปุ่มอยู่ผิดข้าง
+- ปุ่ม+ชื่อ แก้ขนาดไม่ได้
+- ทำไมมันไม่พอดีจอ?
+- จอมือถือ fuck up
+*/
+.content {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px; /* เพิ่มระยะห่างระหว่างแต่ละ section */
+  padding: 20px; /* เพิ่ม padding ภายใน section */
+  background-color: #f9f9f9; /* สีพื้นหลังอ่อน (ตัวอย่าง) */
+  border-radius: 10px; /* มุมมนสำหรับ section */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงาอ่อน */
+}
+
+.details {
+  font-size: 100%;
+}
+
+.details button {
+  background-color: #f9f9f9; /* พื้นหลังสีอ่อน */
+  border: 1px solid #dcdcdc; /* ขอบสีเทาอ่อน */
+  border-radius: 5px; /* ขอบมุมมน */
+  padding: 5px 15px; /* ระยะห่างภายในปุ่ม */
+  font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์เดียวกับในหน้าเว็บ */
+  font-size: 100%; /* ขนาดตัวอักษร */
+  color: #333; /* สีตัวอักษร */
+  cursor: pointer; /* เปลี่ยนเป็นรูปมือเมื่อชี้ */
+  transition: all 0.3s ease; /* เพิ่มเอฟเฟกต์เวลาโฮเวอร์ */
+}
+
+.details button:hover {
+  background-color: #eaeaea; /* พื้นหลังเข้มขึ้นเมื่อโฮเวอร์ */
+  border-color: #bcbcbc; /* ขอบเข้มขึ้นเมื่อโฮเวอร์ */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%; /* เพิ่มระยะห่างระหว่างแต่ละ .item */
+}
+
+.thumbnail {
+  width: 10%; /* กำหนดขนาดของกรอบรูป */
+  height: 10%;
+  margin-right: 10px; /* ระยะห่างระหว่างรูปภาพและข้อความ */
+  overflow: hidden; /* ป้องกันรูปภาพล้นกรอบ */
+  border-radius: 5px; /* เพิ่มมุมมน */
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ปรับรูปภาพให้พอดีกับกรอบ */
+}
+
 .carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 150px;
+    height: 50%;
     margin-bottom: 20px;
   }
   
@@ -151,6 +212,7 @@ li a {
   
   .prev-btn, .next-btn {
     position: absolute;
+    height: 30%;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
