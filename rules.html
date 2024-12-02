@@ -19,13 +19,16 @@
                   <a href="#home"> 
                       <img id="themeImage" src="images/logo test.png" alt="logo">
                   </a>
-              </div>
-              <ul>
+              </div>     
+              <ul id="nav-list">
                   <li><a href="main.html" class="main">Main</a></li>
                   <li><a href="work-Graphic.html" class="work">Work</a></li>
                   <li><a href="rules.html" class="rules">Rules</a></li>
                   <li><a href="About us.html" class="about">About us</a></li>
               </ul>
+              <div class="hamburger" id="hamburger-icon">
+                &#9776;  <!-- Hamburger icon -->
+            </div>
             </nav>
         </div><br> <br> <br> <br> <br>
 
@@ -109,8 +112,18 @@ themeToggleButton.addEventListener('click', () => {
     }
 });
 
+ // Select the hamburger icon and the nav list
+ const hamburgerIcon = document.getElementById('hamburger-icon');
+const navList = document.getElementById('nav-list');
+
+// Toggle the 'show-menu' class on the ul when the hamburger icon is clicked
+hamburgerIcon.addEventListener('click', () => {
+    navList.classList.toggle('show-menu');
+});
+
     </script>
             
             <!-- <script src="script.js"></script> -->
+            <script src="script.js"></script>
           </body>
           </html>
