@@ -94,6 +94,54 @@ header {
   padding-top: 10px;
 }
 
+label {
+  width: 50px;
+  height: 30px;
+  position: fixed; /* ทำให้ label อยู่ในตำแหน่งคงที่ */
+  bottom: 20px; /* ระยะจากขอบล่าง */
+  right: 20px; /* ระยะจากขอบขวา */
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1000; /* เพื่อให้อยู่เหนือองค์ประกอบอื่น */
+}
+
+label:after {
+  content: ""; /* ต้องใส่เพื่อสร้างองค์ประกอบเพิ่มเติม */
+  width: 20px;
+  height: 20px;
+  position: absolute; /* เปลี่ยนจาก `relative` เป็น `absolute` */
+  top: 5px; /* เลื่อนลงมาให้พอดีกับวงกลม */
+  left: 5px; /* ระยะขอบจากซ้าย */
+  background: linear-gradient(180deg, #ffcc89, #d8860b); /* สีวงกลม */
+  border-radius: 50%; /* ทำให้เป็นวงกลม */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* เงาของวงกลม */
+  transition: 0.3s ease; /* ทำให้การเคลื่อนที่ลื่นไหล */
+}
+
+
+input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+input:checked + label {
+  background: #242424;
+}
+
+input:checked + label:after {
+  left: 45px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label:active:after {
+  width: 35px;
+}
+
 .promote {
   display: flex;
   flex-direction: column; 
@@ -246,7 +294,7 @@ header {
 
 .column2 img {
   margin: 0 auto;
-  width: 335px;
+  width: 365px;
   height: 335px;
   border-radius: 50px;
 }
@@ -265,7 +313,7 @@ header {
 
 .column3 img {
   margin: 0 auto;
-  width: 335px;
+  width: 365px;
   height: 335px;
   border-radius: 50px;
 }
@@ -567,4 +615,128 @@ button {
 /* เพิ่มการเปลี่ยนสีเมื่อ hover */
 button:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  html {
+    min-width: 130vh;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 40px;
+  }
+
+  .container {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box; /* เพื่อไม่ให้ padding บวกเพิ่มกับความกว้าง */
+  }
+
+  header, footer {
+      font-size: 1.2em;
+      padding: 10px;
+      text-align: center;
+  }
+
+  main {
+      padding: 10px;
+  }
+
+  .photo {
+    min-width: 100vh;
+    width: 100%;
+  }
+
+  .column1, .column2, .column3, .column4 {
+      display: block;
+      margin: 10px auto; /* จัดให้อยู่ตรงกลาง */
+      width: 100%; /* เต็มความกว้างของหน้าจอ */
+      box-sizing: border-box;
+  }
+
+
+  .column3 img {
+    width: 100%; /* ทำให้รูปภาพเต็ม container */
+    height: auto;
+    border-radius: 10px; /* เพิ่มความโค้งให้ดูทันสมัย */
+}
+
+  .column2 img {
+    width: 100%; /* ทำให้รูปภาพเต็ม container */
+    height: auto;
+    border-radius: 10px; /* เพิ่มความโค้งให้ดูทันสมัย */
+  }
+
+  footer {
+    width: 100%;
+    position: relative; /* หรือ absolute, fixed ขึ้นอยู่กับโครงสร้าง */
+    bottom: 0;
+    width: 100%;
+    clear: both;
+}
+
+label {
+  bottom: 15px;
+  right: 15px;
+  width: 45px;
+  height: 25px;
+}
+
+label:after {
+  width: 18px;
+  height: 18px;
+}
+
+ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  background-color: var(--nav-bg-color);
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  padding-right: 10%;
+}
+
+.hamburger:hover {
+  color: #03500a; /* Optional hover effect */
+}
+
+ul.show-menu {
+  display: flex;  /* Show the menu when the "show-menu" class is added */
+}
+
+li {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+li a {
+  font-size: 20px;
+  color: var(--text-color);
+}
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;  /* Hide hamburger icon */
+  }
+
+  ul {
+    display: flex;  /* Display menu horizontally */
+    flex-direction: row;
+  }
+
+  li {
+    padding: 0 20px;
+  }
 }
