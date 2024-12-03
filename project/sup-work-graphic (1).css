@@ -1,0 +1,510 @@
+body {
+    font-family: 'kanit', sans-serif;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'kanit', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+    max-width: 1800px;
+} 
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  position: fixed; 
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  }
+
+ul {
+  list-style: none; 
+  display: flex;
+  gap: 50px; 
+  margin-right: 10px;
+  padding: 0 10px;
+}
+
+li a { 
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  color: var(--text-color);
+}
+
+label {
+  width: 50px;
+  height: 30px;
+  position: fixed; /* ทำให้ label อยู่ในตำแหน่งคงที่ */
+  bottom: 20px; /* ระยะจากขอบล่าง */
+  right: 20px; /* ระยะจากขอบขวา */
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1000; /* เพื่อให้อยู่เหนือองค์ประกอบอื่น */
+}
+
+label:after {
+  content: ""; /* ต้องใส่เพื่อสร้างองค์ประกอบเพิ่มเติม */
+  width: 20px;
+  height: 20px;
+  position: absolute; /* เปลี่ยนจาก `relative` เป็น `absolute` */
+  top: 5px; /* เลื่อนลงมาให้พอดีกับวงกลม */
+  left: 5px; /* ระยะขอบจากซ้าย */
+  background: linear-gradient(180deg, #ffcc89, #d8860b); /* สีวงกลม */
+  border-radius: 50%; /* ทำให้เป็นวงกลม */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* เงาของวงกลม */
+  transition: 0.3s ease; /* ทำให้การเคลื่อนที่ลื่นไหล */
+}
+
+input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+input:checked + label {
+  background: #242424;
+}
+
+input:checked + label:after {
+  left: 45px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label:active:after {
+  width: 35px;
+}
+
+.work {
+    padding: 3px 25px;
+    background-color: #03500a;
+    border: 2px;
+    border-radius: 100px;
+    color: #ffffff;
+}
+  
+.main:hover {
+    cursor: pointer;
+    color: #ff0000;
+    transition: transform 0.3s, color 0.3s;
+}
+  
+.work:hover {
+    cursor: pointer;
+    color: #00ff2a;
+    transition: transform 0.3s, color 0.3s;
+}
+  
+.rules:hover {
+    cursor: pointer;
+    color: #eeff00;
+    transition: transform 0.3s, color 0.3s;
+}
+  
+.about:hover {
+    cursor: pointer;
+    color: #00e1ff;
+    transition: transform 0.3s, color 0.3s;
+}
+  
+.logo img {
+  margin: 0 auto; 
+  width: 120px;
+  height: 50px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* กระจายเนื้อหา */
+    align-items: center;
+    width: 100%;
+    height: 300px; /* จำกัดความกว้าง */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+}
+
+.main-container div {
+    flex: 1;
+    margin: 10px;
+    margin: 0 auto;
+}
+
+.graphic-button {
+    width: 200px;
+    padding: 3px 3px;
+    background-color: #03500a;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.production-button {
+    width: 200px;
+    padding: 3px 3px;
+    border: 3px solid #3f3f3f;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.production-button:hover {
+    cursor: pointer;
+    background-color: red;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+.drawing-button {
+    width: 200px;
+    padding: 3px 3px;
+    border-radius: 20px;
+    border: 3px solid #3f3f3f;
+    color: #000000;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.drawing-button:hover {
+    cursor: pointer;
+    background-color: #EFF2E0;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+/* Default Light Mode */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  /* --link-color: #1a73e8; */
+  --nav-bg-color: #ffffff;
+  --li-text-color: #000000;
+  --button-bg-color: #007BFF;
+  --button-text-color: #ffffff;
+  --main-bg-color: #235144;
+  --content-bg-color: #f9f9f9;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  /* --link-color: #bb86fc; */
+  --nav-bg-color: #333333;
+  --li-text-color: #ffffff;
+  --button-bg-color: #6200ee;
+  --button-text-color: #ffffff;
+  --main-bg-color: #950709;
+  --content-bg-color: #535353;
+}
+
+/* ส่วนที่ไอจือ cook
+
+- ปุ่มอยู่ผิดข้าง
+- ปุ่ม+ชื่อ แก้ขนาดไม่ได้
+- ทำไมมันไม่พอดีจอ?
+- จอมือถือ fuck up
+*/
+.content {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px; /* เพิ่มระยะห่างระหว่างแต่ละ section */
+  padding: 20px; /* เพิ่ม padding ภายใน section */
+  background-color: #f9f9f9; /* สีพื้นหลังอ่อน (ตัวอย่าง) */
+  border-radius: 10px; /* มุมมนสำหรับ section */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงาอ่อน */
+  background-color: var(--content-bg-color);
+}
+
+.details {
+  font-size: 100%;
+}
+
+.details button {
+  background-color: #f9f9f9; /* พื้นหลังสีอ่อน */
+  border: 1px solid #dcdcdc; /* ขอบสีเทาอ่อน */
+  border-radius: 5px; /* ขอบมุมมน */
+  padding: 5px 15px; /* ระยะห่างภายในปุ่ม */
+  font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์เดียวกับในหน้าเว็บ */
+  font-size: 100%; /* ขนาดตัวอักษร */
+  color: #333; /* สีตัวอักษร */
+  cursor: pointer; /* เปลี่ยนเป็นรูปมือเมื่อชี้ */
+  transition: all 0.3s ease; /* เพิ่มเอฟเฟกต์เวลาโฮเวอร์ */
+}
+
+.details button:hover {
+  background-color: #eaeaea; /* พื้นหลังเข้มขึ้นเมื่อโฮเวอร์ */
+  border-color: #bcbcbc; /* ขอบเข้มขึ้นเมื่อโฮเวอร์ */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%; /* เพิ่มระยะห่างระหว่างแต่ละ .item */
+}
+
+.thumbnail {
+  width: 10%; /* กำหนดขนาดของกรอบรูป */
+  height: 10%;
+  margin-right: 10px; /* ระยะห่างระหว่างรูปภาพและข้อความ */
+  overflow: hidden; /* ป้องกันรูปภาพล้นกรอบ */
+  border-radius: 5px; /* เพิ่มมุมมน */
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ปรับรูปภาพให้พอดีกับกรอบ */
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item {
+    min-width: 30%;
+    min-height: 50%;
+    cursor: pointer;
+  }
+  
+  .prev-btn, .next-btn {
+    position: absolute;
+    height: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+ 
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* ให้ modal อยู่ด้านหน้าสุด */
+  }
+  
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+
+
+  /* Style for Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 40px;
+  }
+
+  .topic {
+    width: 50%;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .text-and-image1, .text-and-image2 {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .text1, .text2, .image1, .image2 {
+    width: 100%;
+    float: none;
+  }
+
+  .text1 p, .text2 p {
+    text-indent: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .image1 img, .image2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .footer-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  label {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 25px;
+  }
+
+  label:after {
+    width: 18px;
+    height: 18px;
+  }
+
+  ul {
+    display: none;  /* Hide menu links by default */
+    flex-direction: column;  /* Stack menu items vertically */
+    position: absolute;
+    top: 60px;  /* Position the menu below the navbar */
+    right: 0;
+    width: 100%;
+    background-color: var(--nav-bg-color);  /* Background for the menu */
+  }
+
+  .hamburger {
+    display: block;  /* Show the hamburger icon */
+    font-size: 30px;
+    cursor: pointer;
+    padding-right: 10%;
+    z-index: 1000; /* Make sure it's above other elements */
+  }
+
+  .hamburger:hover {
+    color: #03500a; /* Optional hover effect */
+  }
+
+  ul.show-menu {
+    display: flex;
+    z-index: 100;  /* Show the menu when the "show-menu" class is added */
+  }
+
+  li {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  li a {
+    font-size: 20px;
+    color: var(--text-color);
+  }
+}
+
+/* For larger screens */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;  /* Hide hamburger icon */
+  }
+
+  ul {
+    display: flex;  /* Display menu horizontally */
+    flex-direction: row;
+  }
+
+  li {
+    padding: 0 20px;
+  }
+}
+
+/* Style for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .topic {
+    font-size: 28px;
+  }
+
+  .text-and-image1, .text-and-image2 {
+    display: table;
+    width: 100%;
+  }
+
+  .text1, .text2 {
+    width: 50%;
+  }
+
+  .image1, .image2 {
+    width: 50%;
+  }
+
+  .text1 p, .text2 p {
+    text-indent: 5ch;
+    padding: 20px;
+  }
+
+  .footer-text {
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  label {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 30px;
+  }
+}
+
+  
