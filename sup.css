@@ -20,7 +20,12 @@ body {
 
 .container {
     max-width: 1800px;
-}  
+}
+
+.container1 {
+  display: table;
+  margin-bottom: 10%;
+}
 
 nav {
     width: 100%;
@@ -382,8 +387,8 @@ footer {
   color: #2D2D2D; /* สีข้อความ */
   padding: 20px 10px; /* เว้นระยะห่างภายใน */
   text-align: center;
-  margin-top: 355px;
   max-width: 100%;
+  bottom: 0;
   background-color: var(--footer-bg-color);
   color: var(--footer-text-color);
 }
@@ -407,8 +412,6 @@ footer a:hover {
   align-items: center;
   max-width: 100%; /* จำกัดความกว้าง */
   margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
-  bottom: 0px;
-  left: 0px;
   padding: 10px;
 }
 
