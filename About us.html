@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wdth,wght@62.5..100,365&display=swap" rel="stylesheet">
         <link href="sup-about us.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>about us</title>
     </head>
     <body>
@@ -54,7 +55,7 @@
       <div class="gridcontainer">
          <div class="column" style="grid-row: 1/2;grid-column: 2/3;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/เว็บ.JPG"  style="width: 60%; border-radius: 50px;"></center>
             <div class="container"> 
               <center>
@@ -71,7 +72,7 @@
 
          <div class="column" style="grid-row: 2/3;grid-column: 1/2;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/จือ.JPG"  style="width: 60%; border-radius: 50px;" ></center>
             <div class="container"> 
               <center>
@@ -88,7 +89,7 @@
 
          <div class="column" style="grid-row: 2/3;grid-column: 2/3;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/เป้.JPG"  style="width: 60%; border-radius: 50px;" ></center>
             <div class="container"> 
               <center>
@@ -105,7 +106,7 @@
 
          <div class="column" style="grid-row: 2/3;grid-column: 3/4;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/กล้า.JPG"  style="width: 60%; border-radius: 50px;" ></center>
             <div class="container"> 
               <center>
@@ -122,7 +123,7 @@
 
          <div class="column" style="grid-row: 3/4;grid-column: 1/2;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/ไอซ์หนวด.JPG"  style="width: 60%; border-radius: 50px;" ></center>
             <div class="container"> 
               <center>
@@ -139,7 +140,7 @@
 
          <div class="column" style="grid-row: 3/4;grid-column: 2/3;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/มิ้ว.JPG"  style="width: 60%; border-radius: 50px;" ></center>
             <div class="container"> 
               <center>
@@ -156,7 +157,7 @@
 
          <div class="column" style="grid-row: 3/4;grid-column: 3/4;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/ไอซ์.JPG"  style="width: 60%; border-radius: 50px;" ></center>
             <div class="container"> 
               <center>
@@ -173,7 +174,7 @@
 
          <div class="column" style="grid-row: 4/5;grid-column: 1/2;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/ซี.JPG"  style="width: 60%; border-radius: 50px;" ></center>
             <div class="container"> 
               <center>
@@ -190,7 +191,7 @@
 
          <div class="column" style="grid-row: 4/5;grid-column: 2/3;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/คิส.JPG"  style="width: 60%; border-radius: 50px;" ></center>
             <div class="container"> 
               <center>
@@ -207,7 +208,7 @@
 
          <div class="column" style="grid-row: 4/5;grid-column: 3/4;">
     
-            <div>
+            <div data-aos="fade-up">
             <center><img src="images/รุ้ง.JPG"  style="width: 60%; border-radius: 50px;" ></center>
             <div class="container"> 
               <center>
@@ -304,6 +305,12 @@ hamburgerIcon.addEventListener('click', () => {
     navList.classList.toggle('show-menu');
 });
       </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- import animation aos -->
+<script> 
+    // เรียก aos เพื่อใช้งานใน javascript
+    AOS.init();
+</script>
 
 <script src="script.js"></script>
     </body>

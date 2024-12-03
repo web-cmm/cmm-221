@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wdth,wght@62.5..100,365&display=swap" rel="stylesheet">
         <link href="sup-rules.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>rules</title>
     </head>
     <body>
@@ -41,7 +42,7 @@
                 
               <section class="content">
                 
-                <div class="text-and-image1">
+                <div class="text-and-image1" data-aos="fade-up">
                     <div class="text1">
                       <p>1.   เลือกสไตล์งาน หรือ ตัวงานที่ท่านต้องการ </p>
                       <p>2.   แจ้งรายละเอียดเกี่ยวกับตัวงานที่ท่านต้องการให้เราทำ และ ได้รับ อาทิเช่น รูปแบบการตัดวีดิโอ การจัดเลย์เอาท์ เอาท์ไลน์ต่าง ๆ ของงาน</p>
@@ -53,7 +54,7 @@
                   </div>
                 </div>
                 
-                <div class="text-and-image2">
+                <div class="text-and-image2" data-aos="fade-up">
                   <div class="image2">
                     <center><img src="images/Rule2.PNG" alt="Illustration"></center>
                   </div>  
@@ -128,6 +129,12 @@ hamburgerIcon.addEventListener('click', () => {
 });
 
     </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- import animation aos -->
+<script> 
+    // เรียก aos เพื่อใช้งานใน javascript
+    AOS.init();
+</script>
             
             <!-- <script src="script.js"></script> -->
             <script src="script.js"></script>
