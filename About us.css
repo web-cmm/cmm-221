@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /* ลบระยะขอบ */
+    padding: 0; /* ลบระยะห่างภายใน (ถ้ามี) */
+    box-sizing: border-box; /* เพื่อควบคุมการคำนวณพื้นที่ */
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  
+  .containernav {
+    max-width: 1800px;
+}
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  position: fixed; 
+  z-index: 20;
+  backdrop-filter: blur(10px);
+}
+
+ul {
+  list-style: none; 
+  display: flex;
+  gap: 50px; 
+  margin-right: 10px;
+  padding: 0 10px;
+}
+
+li a { 
+text-decoration: none;
+font-size: 20px;
+color: #000000;
+color: var(--text-color);
+}
+
+label {
+width: 50px;
+height: 30px;
+position: fixed; /* ทำให้ label อยู่ในตำแหน่งคงที่ */
+bottom: 20px; /* ระยะจากขอบล่าง */
+right: 20px; /* ระยะจากขอบขวา */
+background: #ebebeb;
+border-radius: 200px;
+box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+cursor: pointer;
+transition: 0.3s ease;
+z-index: 1000; /* เพื่อให้อยู่เหนือองค์ประกอบอื่น */
+}
+
+label:after {
+content: ""; /* ต้องใส่เพื่อสร้างองค์ประกอบเพิ่มเติม */
+width: 20px;
+height: 20px;
+position: absolute; /* เปลี่ยนจาก `relative` เป็น `absolute` */
+top: 5px; /* เลื่อนลงมาให้พอดีกับวงกลม */
+left: 5px; /* ระยะขอบจากซ้าย */
+background: linear-gradient(180deg, #ffcc89, #d8860b); /* สีวงกลม */
+border-radius: 50%; /* ทำให้เป็นวงกลม */
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* เงาของวงกลม */
+transition: 0.3s ease; /* ทำให้การเคลื่อนที่ลื่นไหล */
+}
+
+
+input {
+width: 0;
+height: 0;
+visibility: hidden;
+}
+
+input:checked + label {
+background: #242424;
+}
+
+input:checked + label:after {
+left: 45px;
+transform: translateX(-100%);
+background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label:active:after {
+width: 35px;
+}
+
+.about {
+  padding: 3px 25px;
+  background-color: #03500a;
+  border: 2px;
+  border-radius: 100px;
+  color: #ffffff;
+  background-color: var(--main-bg-color);
+}
+
+.main:hover {
+  cursor: pointer;
+  color: #ff0000;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.work:hover {
+  cursor: pointer;
+  color: #00ff2a;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.rules:hover {
+  cursor: pointer;
+  color: #eeff00;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.about:hover {
+  cursor: pointer;
+  color: #00e1ff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.logo img {
+  margin: 0 auto; 
+  width: 120px;
+  height: 50px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+  
+  .column {
+    
+    margin-bottom: 20px; 
+    padding: 0 8px; 
+  }
+  
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  
+  
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 1;
+    display: inline-block;
+    padding: 8px;
+    color: white; 
+    background-color: #000; 
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: green;
+  }
+  
+
+
+  @media (max-width: 768px) {
+
+    .column {
+      width: 100%;
+      display: block;
+    }
+ 
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    grid-template-columns: repeat(1fr);
+  }
+
+    .container {
+      padding: 15px;
+    }
+  
+    .logo img {
+      width: 100px;
+      height: 40px;
+    }
+  
+    .topic {
+      width: 50%;
+      font-size: 24px;
+      text-align: center;
+    }
+  
+    .text-and-image1, .text-and-image2 {
+      display: block;
+      margin-top: 20px;
+    }
+  
+    .text1, .text2, .image1, .image2 {
+      width: 100%;
+      float: none;
+    }
+  
+    .text1 p, .text2 p {
+      text-indent: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .image1 img, .image2 img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  
+    .footer-text {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 16px;
+      text-align: center;
+    }
+  
+    label {
+      bottom: 15px;
+      right: 15px;
+      width: 45px;
+      height: 25px;
+    }
+  
+    label:after {
+      width: 18px;
+      height: 18px;
+    }
+  
+    ul {
+      display: none;  /* Hide menu links by default */
+      flex-direction: column;  /* Stack menu items vertically */
+      position: absolute;
+      top: 60px;  /* Position the menu below the navbar */
+      right: 0;
+      width: 100%;
+      background-color: var(--nav-bg-color);  /* Background for the menu */
+    }
+  
+    .hamburger {
+      display: block;  /* Show the hamburger icon */
+      font-size: 30px;
+      cursor: pointer;
+      padding-right: 10%;
+      z-index: 1000; /* Make sure it's above other elements */
+    }
+  
+    .hamburger:hover {
+      color: #03500a; /* Optional hover effect */
+    }
+  
+    ul.show-menu {
+      display: flex;  /* Show the menu when the "show-menu" class is added */
+    }
+  
+    li {
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    li a {
+      font-size: 20px;
+      color: var(--text-color);
+    }
+  }
+  
+  /* For larger screens */
+  @media (min-width: 769px) {
+    .hamburger {
+      display: none;  /* Hide hamburger icon */
+    }
+  
+    ul {
+      display: flex;  /* Display menu horizontally */
+      flex-direction: row;
+    }
+  
+    li {
+      padding: 0 20px;
+    }
+  }
+  
+  /* Style for Tablets (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .container {
+      padding: 20px;
+    }
+  
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .topic {
+      font-size: 28px;
+    }
+  
+    .text-and-image1, .text-and-image2 {
+      display: table;
+      width: 100%;
+    }
+  
+    .text1, .text2 {
+      width: 50%;
+    }
+  
+    .image1, .image2 {
+      width: 50%;
+    }
+  
+    .text1 p, .text2 p {
+      text-indent: 5ch;
+      padding: 20px;
+    }
+  
+    .footer-text {
+      font-size: 18px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  
+    label {
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 30px;
+    }
+  }
+  
