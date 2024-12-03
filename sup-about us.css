@@ -166,14 +166,17 @@ ul {
 }
 
 footer {
-    background-color: #D9D9D9; /* สีพื้นหลัง */
-    color: #2D2D2D; /* สีข้อความ */
-    padding: 20px 10px; /* เว้นระยะห่างภายใน */
-    text-align: center;
-    margin-top: 100px;
-    max-width: 100%;
-    background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
+  position: relative; /* ใช้ relative เพื่อให้ footer อยู่ภายใน flow ของหน้า */
+  bottom: 0;
+  width: 100%; /* ความกว้างเต็มหน้า */
+  background-color: #D9D9D9; /* สีพื้นหลัง */
+  color: #2D2D2D; /* สีข้อความ */
+  padding: 20px 10px; /* เว้นระยะภายใน */
+  text-align: center;
+  box-sizing: border-box; /* รวม padding และ border ในการคำนวณขนาด */
+  overflow: hidden; /* ป้องกันการล้น */
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
   }
   
   /* ลิงก์ใน Footer */
@@ -195,8 +198,6 @@ footer {
     align-items: center;
     max-width: 100%; /* จำกัดความกว้าง */
     margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
-    bottom: 0px;
-    left: 0px;
     padding: 10px;
   }
   
